@@ -6,38 +6,38 @@
 </head>
 <body>
 <h1 style="font-size: 30px"><b>Caculator</b></h1><br>
-<input type="number" id="num1" onchange="add();subtract();multip();divide()">
-<input type="number" id="num2" onchange="add();subtract();multip();divide()"><br>
+<input type="number" id="num1" onclick="add();subtract();multip();divide()">
+<input type="number" id="num2" onclick="add();subtract();multip();divide()"><br>
 <button type="button" onclick="add()">Addition(+)</button>
 <button type="button" onclick="subtract()">Subtraction(-)</button>
 <button type="button" onclick="multip()">Multiplication(*)</button>
 <button type="button" onclick="divide()">Division(/)</button>
-<p id="result"></p>
+<p id="res"></p>
 </body>
 <script>
   function add() {
-    let in1 = document.getElementById('num1').value;
-    let in2 = document.getElementById('num2').value;
-    let sum = parseFloat(in1) + parseFloat(in2);
-    document.getElementById("result").innerHTML = "<b>Result </b>" +sum;
+    let in1 = parseFloat(document.getElementById('num1').value);
+    let in2 = parseFloat(document.getElementById('num2').value);
+    let sum = in1 + in2;
+    document.getElementById("res").innerHTML = "<b>Result </b>" +sum;
   }
   function subtract() {
-    let in1 = document.getElementById('num1').value;
-    let in2 = document.getElementById('num2').value;
-    let sub = parseFloat(in1) - parseFloat(in2);
-    document.getElementById("result").innerHTML = "<b>Result </b> " +sub;
+    let in1 = parseFloat(document.getElementById('num1').value);
+    let in2 = parseFloat(document.getElementById('num2').value);
+    let sub = in1 - in2;
+    document.getElementById("res").innerHTML = "<b>Result </b> " +sub;
   }
   function multip() {
-    let in1 = document.getElementById('num1').value;
-    let in2 = document.getElementById('num2').value;
-    let multip = parseFloat(in1) * parseFloat(in2);
-    document.getElementById("result").innerHTML = "<b>Result </b> " +multip;
+    let in1 = parseFloat(document.getElementById('num1').value);
+    let in2 = parseFloat(document.getElementById('num2').value);
+    let multip = in1 * in2;
+    document.getElementById("res").innerHTML = "<b>Result </b> " +multip;
   }
   function divide() {
-    let in1 = document.getElementById('num1').value;
-    let in2 = document.getElementById('num2').value;
-    let divide = parseFloat(in1) / parseFloat(in2);
-    document.getElementById("result").innerHTML = "<b>Result </b> " +divide;
+    let in1 = parseFloat(document.getElementById('num1').value);
+    let in2 = parseFloat(document.getElementById('num2').value);
+    let divide = in1 / in2;
+    document.getElementById("res").innerHTML = "<b>Result </b> " +divide;
   }
 </script>
 </html>
