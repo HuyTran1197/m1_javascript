@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color: skyblue">
+<h1 style="text-align: center">Exchange Your Money</h1>
+<table border="1" style="margin-top: 100px;width:500px;height: 100px;margin-left: 460px;border-collapse: collapse;background-color: burlywood">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th rowspan="2" style="text-align: center">
+            <button type="button" onclick="change()">Convert</button>
+        </th>
+    </tr>
+    <tr >
+        <td style="text-align: center">
+            <input type="number" id="money" placeholder="please enter amount" />
+        </td>
+        <td style="text-align: center">
+            <select id="from">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </td>
+        <td style="text-align: center">
+            <select id="to">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+    </tr>
+</table><br>
+<p style="text-align: center" id="rs"></p>
+</body>
+<script>
+    function change() {
+        let exchange = document.getElementById("money").value;
+        let do1 = document.getElementById("from").value;
+        let do2 = document.getElementById("to").value;
+        let yourMoney;
+        if ( do1 == "VND" && do2 == "USD" ) {
+            yourMoney = (exchange / 23000) + " $";
+        }
+        else if (do1 == "USD" && do2 == "VND") {
+            yourMoney = (exchange * 23000) + " Dong";
+        }
+        else if (do1 == "VND") {
+            yourMoney = exchange + " Dong";
+        }
+        else {
+            yourMoney = exchange + " $";
+        }
+        document.getElementById("rs").innerHTML = "<b>Result</b> = " + yourMoney;
+    }
+</script>
+</html>
