@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body style="background-color: darkred">
+<table style="width: 300px;height: 150px;margin-left: 550px;margin-top: 200px;text-align: center;background-color: darkgray">
+    <tr>
+      <td colspan="4"><input type="text" id="number" onclick="nhap()"/></td>
+    </tr>
+    <tr>
+      <td><input type="button" onclick="nhap(this.value)" value="1"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="2"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="3"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="+"/></td>
+    </tr>
+    <tr>
+      <td><input type="button" onclick="nhap(this.value)" value="4"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="5"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="6"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="-"/></td>
+    </tr>
+    <tr>
+      <td><input type="button" onclick="nhap(this.value)" value="7"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="8"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="9"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="*"/></td>
+    </tr>
+    <tr>
+      <td><input type="button" onclick="nhap(this.value)" value="0"/></td>
+      <td><input id="reset" type="reset" onclick="xoa()" value="AC"/></td>
+      <td><input type="button" onclick="nhap(this.value)" value="/"/></td>
+      <td><input type="button" onclick="bang()" value="="/></td>
+    </tr>
+</table>
+<script>
+    function nhap(kytu) {
+        document.getElementById('number').value += kytu;
+   }
+    function bang(){
+        let string = document.getElementById('number').value;
+        let result = eval(string);
+        document.getElementById('number').value = result;
+   }
+    function xoa(){
+        document.getElementById('number').value = document.getElementById('reset').innerHTML;
+   }
+</script>
+</body>
+</html>
