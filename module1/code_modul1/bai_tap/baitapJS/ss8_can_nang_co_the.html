@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng cơ thể chuẩn BMI</h1>
+<input type="number" id="number1" placeholder="nhập cân nặng"/>
+<input type="number" id="number2" placeholder="nhập chiều cao"/><br>
+<button style="margin-top: 25px" type="button" onclick="bmi()">Check</button><br>
+<p id="result"></p>
+</body>
+<script>
+    function bmi(){
+        let width = document.getElementById("number1").value;
+        let height = document.getElementById("number2").value;
+        let BMI = width / (height * height);
+        if (BMI < 18.5){
+            document.getElementById("result").innerHTML = "chỉ số = " + BMI + ":<b> thiếu cân </b>";
+        } else if (BMI < 25) {
+            document.getElementById("result").innerHTML = "chỉ số = " + BMI + ":<b> bình thuờng </b>";
+        } else if (BMI < 30) {
+            document.getElementById("result").innerHTML = "chỉ số = " + BMI + ":<b> thừa cân </b>";
+        } else {
+            document.getElementById("result").innerHTML = "chỉ số = " + BMI + ":<b> béo phì </b>";
+
+        }
+    }
+</script>
+</html>
