@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let diemKiemTra = +prompt("nhập điểm bài kiểm tra");
+  let diemGiuaKy = +prompt("nhập điểm thi giữa kỳ");
+  let diemCuoiKy = +prompt("nhập điểm thi cuối kỳ");
+  let diemTrungBinh = (diemKiemTra + diemGiuaKy + diemCuoiKy)/3;
+  if (diemTrungBinh >= 85) {
+    alert("Học sinh giỏi");
+  } else if (diemTrungBinh >= 65) {
+    alert("Học sinh khá");
+  } else {
+    alert("Học sinh trung bình");
+  }
+</script>
+</body>
+</html>
