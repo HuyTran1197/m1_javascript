@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text1 {
+            color: blue;
+        }
+        .style1 {
+            height: 100px;
+            margin-left: 630px;
+            margin-top: 100px;
+            text-align: center;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">Máy tính bảng</h1>
+<table class="style1">
+    <tr>
+        <td colspan="4"><input class="text1" type="text" id="number" onclick="nhap()"/></td>
+    </tr>
+    <tr>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="1">1</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="2">2</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="3">3</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value=" + ">+</button></td>
+    </tr>
+    <tr>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="4">4</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="5">5</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="6">6</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value=" - ">-</button></td>
+    </tr>
+    <tr>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="7">7</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="8">8</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="9">9</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value=" * ">*</button></td>
+    </tr>
+    <tr>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value="0">0</button></td>
+        <td><button class="text1" id="reset" type="reset" onclick="xoa()" >C</button></td>
+        <td><button class="text1" type="button" onclick="nhap(this.value)" value=" / ">/</button></td>
+        <td><button class="text1" type="button" onclick="bang()">=</button></td>
+    </tr>
+</table>
+<script>
+    function nhap(kitu) {
+        document.getElementById('number').value += kitu;
+    }
+    function bang(){
+        let string = document.getElementById('number').value;
+        let result = eval(string);
+        document.getElementById('number').value = result;
+    }
+    function xoa(){
+        document.getElementById('number').value = document.getElementById('reset').value;
+    }
+</script>
+</body>
+</html>
