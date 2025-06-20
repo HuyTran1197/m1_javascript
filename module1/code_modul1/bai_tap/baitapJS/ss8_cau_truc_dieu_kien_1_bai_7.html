@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let thueBao1thang = 21000;
+  let phiGoi1phut = 700;
+  let soPhutGoi = +prompt("nhập số phút đã gọi");
+  let cuocDienThoaiGiaDinh;
+  if (soPhutGoi <= 10) {
+      alert("Vì gia đình sử dụng cuộc gọi dưới 10 phút trong tháng nên được miễn cuớc phút");
+      cuocDienThoaiGiaDinh = thueBao1thang;
+      alert(`Cuớc điện thoại của tháng này là ${cuocDienThoaiGiaDinh} Đồng`);
+  } else {
+      cuocDienThoaiGiaDinh = phiGoi1phut * soPhutGoi + thueBao1thang;
+      alert(`Cuớc điện thoại của tháng này là ${cuocDienThoaiGiaDinh} Đồng`);
+  }
+</script>
+</body>
+</html>
