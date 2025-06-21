@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 3 cạnh của một tam giác</title>
+</head>
+<body>
+<script>
+  let a = +prompt("nhập cạnh a");
+  let b = +prompt("nhập cạnh b");
+  let c = +prompt("nhập cạnh c");
+  if (a > 0 && b > 0 && c > 0) {
+    if ((a*a + b*b == c*c) || (b*b + c*c == a*a) || (c*c + a*a == b*b)) {
+      alert("vậy a, b, c là tam giác vuông");
+    } else if (a+b > c && c+a > b && b+c > a) {
+      alert("vậy a, b, c là tam giác thuờng");
+    } else {
+      alert("vậy a, b, c không phải là một tam giác");
+    }
+  } else {
+    alert("thông số không hợp lệ để cấu thành 1 tam giác");
+  }
+</script>
+</body>
+</html>
